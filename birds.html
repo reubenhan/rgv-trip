@@ -1,0 +1,1210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#1a2e1a">
+<meta name="description" content="South Texas Birding Trip — May 28–31, 2026. Laguna Atascosa NWR + South Padre Island.">
+<meta property="og:title" content="South Texas Birding · May 28–31">
+<meta property="og:description" content="4 days, Laguna Atascosa NWR + South Padre Island. Full itinerary, maps, dining & camping.">
+<title>South Texas Birding · May 28–31, 2026</title>
+<link rel="manifest" href="#" id="manifest-placeholder">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,300;1,500&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --bg:        #0f1a0f;
+    --bg2:       #162016;
+    --bg3:       #1e2d1e;
+    --card:      #1a2a1a;
+    --card2:     #213021;
+    --border:    rgba(120,180,80,0.12);
+    --border2:   rgba(120,180,80,0.22);
+    --green:     #7ab850;
+    --green-lt:  #a8d878;
+    --amber:     #e6b84a;
+    --coral:     #d96f4e;
+    --teal:      #4ab8a0;
+    --sand:      #c8b878;
+    --text:      #d8e8c8;
+    --text2:     #8a9e7a;
+    --text3:     #5a6e50;
+    --white:     #f0f4ec;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── GRAIN OVERLAY ── */
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.6;
+  }
+
+  /* ── HERO ── */
+  .hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 0 0 3rem;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 30%, rgba(74,184,160,0.08) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 10% 80%, rgba(122,184,80,0.06) 0%, transparent 55%),
+      radial-gradient(ellipse 40% 40% at 90% 90%, rgba(230,184,74,0.05) 0%, transparent 50%),
+      var(--bg);
+  }
+
+  /* Horizon line decoration */
+  .hero-horizon {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--green), transparent);
+    opacity: 0.3;
+  }
+
+  /* Animated bird silhouettes */
+  .birds-svg {
+    position: absolute;
+    top: 18%;
+    right: 8%;
+    opacity: 0.18;
+    animation: drift 18s ease-in-out infinite alternate;
+  }
+  @keyframes drift {
+    from { transform: translateX(0) translateY(0); }
+    to   { transform: translateX(-20px) translateY(-12px); }
+  }
+
+  .hero-inner {
+    position: relative;
+    z-index: 1;
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    width: 100%;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .18em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 1rem;
+    opacity: 0;
+    animation: fadeUp .6s .2s forwards;
+  }
+
+  .hero-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(42px, 10vw, 72px);
+    font-weight: 400;
+    line-height: 1.0;
+    color: var(--white);
+    margin-bottom: .5rem;
+    opacity: 0;
+    animation: fadeUp .7s .35s forwards;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: var(--green-lt);
+    display: block;
+    font-size: .7em;
+  }
+
+  .hero-date {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(18px, 4vw, 26px);
+    color: var(--sand);
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeUp .7s .5s forwards;
+  }
+
+  .hero-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    opacity: 0;
+    animation: fadeUp .7s .65s forwards;
+  }
+
+  .hero-pill {
+    font-size: 11px;
+    font-family: 'DM Mono', monospace;
+    padding: 5px 12px;
+    border-radius: 20px;
+    border: 1px solid var(--border2);
+    color: var(--text2);
+    background: rgba(255,255,255,0.03);
+  }
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── NAV ── */
+  .nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(15,26,15,0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 1rem;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav-inner {
+    display: flex;
+    gap: 0;
+    max-width: 680px;
+    margin: 0 auto;
+    white-space: nowrap;
+  }
+  .nav-btn {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text3);
+    padding: 14px 14px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: color .2s;
+    border-bottom: 2px solid transparent;
+    flex-shrink: 0;
+  }
+  .nav-btn:hover, .nav-btn.active {
+    color: var(--green-lt);
+    border-bottom-color: var(--green);
+  }
+
+  /* ── MAIN CONTENT ── */
+  .main {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 0 1.25rem 4rem;
+  }
+
+  /* ── SECTION ── */
+  .section {
+    padding-top: 3rem;
+  }
+
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 9px;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: .75rem;
+  }
+
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 1.25rem;
+    line-height: 1.2;
+  }
+
+  /* ── DAY HEADER ── */
+  .day-header {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    margin: 2.5rem 0 1rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--border);
+  }
+  .day-label {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--white);
+  }
+  .day-date {
+    font-family: 'DM Mono', monospace;
+    font-size: 10px;
+    color: var(--text3);
+    letter-spacing: .08em;
+  }
+  .day-sub {
+    font-size: 11px;
+    color: var(--text2);
+    margin-left: auto;
+    font-style: italic;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 13px;
+  }
+
+  /* ── EVENT CARD ── */
+  .event {
+    display: flex;
+    gap: 14px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn .4s forwards;
+  }
+  @keyframes fadeIn {
+    to { opacity: 1; }
+  }
+
+  .event-time {
+    width: 52px;
+    flex-shrink: 0;
+    text-align: right;
+    padding-top: 12px;
+  }
+  .event-time span {
+    font-family: 'DM Mono', monospace;
+    font-size: 9.5px;
+    color: var(--text3);
+    line-height: 1.4;
+    display: block;
+  }
+
+  .event-line {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    width: 18px;
+  }
+  .event-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--bg3);
+    border: 1.5px solid var(--border2);
+    margin-top: 14px;
+    flex-shrink: 0;
+  }
+  .event-dot.green  { border-color: var(--green); background: rgba(122,184,80,0.15); }
+  .event-dot.amber  { border-color: var(--amber); background: rgba(230,184,74,0.15); }
+  .event-dot.teal   { border-color: var(--teal); background: rgba(74,184,160,0.12); }
+  .event-dot.coral  { border-color: var(--coral); background: rgba(217,111,78,0.12); }
+  .event-dot.sand   { border-color: var(--sand); background: rgba(200,184,120,0.1); }
+  .event-stripe {
+    flex: 1;
+    width: 1px;
+    background: var(--border);
+    margin-top: 4px;
+  }
+
+  .event-card {
+    flex: 1;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    margin-bottom: 2px;
+    transition: border-color .2s, background .2s;
+  }
+  .event-card:hover {
+    border-color: var(--border2);
+    background: var(--card2);
+  }
+
+  .event-title {
+    font-size: 13.5px;
+    font-weight: 500;
+    color: var(--white);
+    margin-bottom: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px;
+    line-height: 1.3;
+  }
+
+  .event-body {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.65;
+  }
+
+  .tag {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .04em;
+    text-transform: uppercase;
+    padding: 2px 7px;
+    border-radius: 10px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+  .tag-green { background: rgba(122,184,80,0.15); color: var(--green-lt); border: 1px solid rgba(122,184,80,0.25); }
+  .tag-amber { background: rgba(230,184,74,0.12); color: var(--amber); border: 1px solid rgba(230,184,74,0.22); }
+  .tag-teal  { background: rgba(74,184,160,0.1);  color: var(--teal);  border: 1px solid rgba(74,184,160,0.2);  }
+  .tag-opt   { background: rgba(255,255,255,0.05); color: var(--text3); border: 1px solid rgba(255,255,255,0.08); }
+  .tag-coral { background: rgba(217,111,78,0.1); color: var(--coral); border: 1px solid rgba(217,111,78,0.2); }
+
+  .tip {
+    margin-top: 8px;
+    padding: 7px 10px;
+    background: rgba(74,184,160,0.07);
+    border-left: 2px solid var(--teal);
+    border-radius: 0 6px 6px 0;
+    font-size: 11px;
+    color: var(--teal);
+    line-height: 1.55;
+  }
+  .warn {
+    margin-top: 8px;
+    padding: 7px 10px;
+    background: rgba(230,184,74,0.07);
+    border-left: 2px solid var(--amber);
+    border-radius: 0 6px 6px 0;
+    font-size: 11px;
+    color: var(--amber);
+    line-height: 1.55;
+  }
+
+  /* optional banner */
+  .opt-banner {
+    background: rgba(255,255,255,0.02);
+    border: 1px dashed rgba(255,255,255,0.1);
+    border-radius: 10px;
+    padding: 10px 13px;
+    margin-bottom: 10px;
+    font-size: 11.5px;
+    color: var(--text3);
+    line-height: 1.6;
+  }
+  .opt-banner strong { color: var(--text2); display: block; margin-bottom: 3px; font-weight: 500; }
+
+  /* ── DINING CARD ── */
+  .dining-hero {
+    background: linear-gradient(135deg, #1e2a14 0%, #162018 50%, #1a2020 100%);
+    border: 1px solid rgba(230,184,74,0.2);
+    border-radius: 14px;
+    padding: 18px 18px 16px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+  }
+  .dining-hero::before {
+    content: '';
+    position: absolute;
+    top: -30px; right: -30px;
+    width: 100px; height: 100px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(230,184,74,0.08), transparent 70%);
+  }
+  .dining-eyebrow {
+    font-family: 'DM Mono', monospace;
+    font-size: 8.5px;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--amber);
+    margin-bottom: 6px;
+  }
+  .dining-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 24px;
+    font-weight: 400;
+    color: var(--white);
+    margin-bottom: 5px;
+  }
+  .dining-body {
+    font-size: 12px;
+    color: var(--text2);
+    line-height: 1.6;
+    margin-bottom: 10px;
+  }
+  .dining-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .dining-chip {
+    font-size: 10px;
+    padding: 3px 10px;
+    border-radius: 15px;
+    background: rgba(230,184,74,0.1);
+    border: 1px solid rgba(230,184,74,0.18);
+    color: var(--sand);
+  }
+
+  .dining-alts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 4px;
+  }
+  .dining-alt {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 12px;
+  }
+  .dining-alt-name { font-size: 12px; font-weight: 500; color: var(--white); margin-bottom: 3px; }
+  .dining-alt-body { font-size: 11px; color: var(--text2); line-height: 1.5; }
+
+  /* ── REMOTE WORK ── */
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    margin-top: 8px;
+  }
+  .work-card {
+    background: var(--card2);
+    border: 1px solid var(--border2);
+    border-radius: 10px;
+    padding: 11px 12px;
+  }
+  .work-card.featured { border-color: rgba(74,184,160,0.3); }
+  .work-name { font-size: 12.5px; font-weight: 500; color: var(--white); margin-bottom: 3px; }
+  .work-body { font-size: 11px; color: var(--text2); line-height: 1.55; }
+  .work-badge {
+    font-family: 'DM Mono', monospace;
+    font-size: 8px;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 4px;
+    display: block;
+  }
+
+  /* ── BUDGET ── */
+  .budget-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px;
+    margin-top: 4px;
+  }
+  .budget-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 7px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12.5px;
+  }
+  .budget-row:last-of-type { border: none; }
+  .budget-label { color: var(--text2); }
+  .budget-val { font-family: 'DM Mono', monospace; font-size: 11px; color: var(--white); }
+  .budget-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0 0;
+    border-top: 1px solid var(--border2);
+    margin-top: 4px;
+    font-size: 14px;
+  }
+  .budget-total-label { font-weight: 500; color: var(--white); }
+  .budget-total-val { font-family: 'DM Mono', monospace; font-size: 13px; color: var(--green-lt); }
+
+  /* ── CHECKLIST ── */
+  .checklist { list-style: none; }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 12.5px;
+    color: var(--text);
+  }
+  .checklist li:last-child { border: none; }
+  .check-box {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    border: 1.5px solid var(--border2);
+    flex-shrink: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background .15s, border-color .15s;
+    margin-top: 1px;
+  }
+  .check-box.checked {
+    background: var(--green);
+    border-color: var(--green);
+  }
+  .check-box.checked::after {
+    content: '✓';
+    font-size: 10px;
+    color: #fff;
+    font-weight: 700;
+  }
+  .check-text { flex: 1; line-height: 1.4; }
+  .check-sub { font-size: 11px; color: var(--text3); display: block; margin-top: 1px; }
+
+  /* ── SPECIES LIST ── */
+  .species-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 6px;
+    margin-top: 8px;
+  }
+  .species-item {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 7px 10px;
+    font-size: 11.5px;
+    color: var(--text);
+    display: flex;
+    align-items: center;
+    gap: 7px;
+  }
+  .species-dot {
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  /* ── MAP LINK ── */
+  .map-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--card);
+    border: 1px solid var(--border2);
+    border-radius: 10px;
+    padding: 11px 14px;
+    text-decoration: none;
+    color: var(--green-lt);
+    font-size: 12px;
+    margin-top: 6px;
+    transition: background .15s;
+  }
+  .map-link:hover { background: var(--card2); }
+
+  /* ── FOOTER ── */
+  .footer {
+    text-align: center;
+    padding: 3rem 1.5rem 2rem;
+    border-top: 1px solid var(--border);
+    margin-top: 3rem;
+  }
+  .footer-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-style: italic;
+    color: var(--text2);
+    margin-bottom: 6px;
+  }
+  .footer-sub { font-size: 11px; color: var(--text3); }
+
+  /* ── SCROLL ANIMATION ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(14px);
+    transition: opacity .5s ease, transform .5s ease;
+  }
+  .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 480px) {
+    .hero-title { font-size: 38px; }
+    .dining-alts { grid-template-columns: 1fr; }
+    .work-grid { grid-template-columns: 1fr; }
+    .species-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-horizon"></div>
+
+  <!-- Animated bird silhouettes -->
+  <svg class="birds-svg" width="200" height="80" viewBox="0 0 200 80" fill="none">
+    <path d="M10 40 Q25 28 40 40" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.7"/>
+    <path d="M45 35 Q60 23 75 35" stroke="currentColor" stroke-width="1.5" fill="none"/>
+    <path d="M85 28 Q100 16 115 28" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.5"/>
+    <path d="M130 38 Q142 29 154 38" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.8"/>
+    <path d="M50 55 Q62 46 74 55" stroke="currentColor" stroke-width="1" fill="none" opacity="0.4"/>
+    <path d="M160 22 Q170 14 180 22" stroke="currentColor" stroke-width="1" fill="none" opacity="0.6"/>
+  </svg>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">South Texas · Canon R7 · RF 200–800mm</div>
+    <h1 class="hero-title">
+      Birding the<br>
+      <em>Lower Rio Grande</em>
+    </h1>
+    <div class="hero-date">May 28 – 31, 2026</div>
+    <div class="hero-pills">
+      <span class="hero-pill">📅 Thu–Sun · 3 nights</span>
+      <span class="hero-pill">🏕 Thomae → SPI Beach</span>
+      <span class="hero-pill">🐦 Laguna Atascosa NWR</span>
+      <span class="hero-pill">🌊 South Padre Island</span>
+      <span class="hero-pill">🌡 80°F lows · Gulf breeze</span>
+      <span class="hero-pill">💰 ~$380–425 excl. food</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ NAV ═══════════════ -->
+<nav class="nav">
+  <div class="nav-inner">
+    <button class="nav-btn" onclick="scrollTo('thu')">Thu</button>
+    <button class="nav-btn" onclick="scrollTo('fri')">Fri</button>
+    <button class="nav-btn" onclick="scrollTo('sat')">Sat</button>
+    <button class="nav-btn" onclick="scrollTo('sun')">Sun</button>
+    <button class="nav-btn" onclick="scrollTo('dining')">Dining</button>
+    <button class="nav-btn" onclick="scrollTo('camping')">Camping</button>
+    <button class="nav-btn" onclick="scrollTo('species')">Species</button>
+    <button class="nav-btn" onclick="scrollTo('budget')">Budget</button>
+    <button class="nav-btn" onclick="scrollTo('prep')">Prep</button>
+  </div>
+</nav>
+
+<!-- ═══════════════ MAIN ═══════════════ -->
+<main class="main">
+
+  <!-- ──────── THURSDAY ──────── -->
+  <div id="thu" class="section">
+    <div class="section-label">Day 0 — Optional</div>
+    <h2 class="section-title">Thursday, May 28</h2>
+
+    <div class="opt-banner reveal">
+      <strong>⬜ Optional early drive</strong>
+      Skip this and leave Friday morning if preferred — the itinerary works either way. Leaving Thursday evening earns a full Friday remote work day at GoodPeople Coffee in Los Fresnos, plus a relaxed first dawn at Laguna Atascosa.
+    </div>
+
+    <div class="event reveal" style="animation-delay:.05s">
+      <div class="event-time"><span>5–6 pm</span><span>Austin</span></div>
+      <div class="event-line"><div class="event-dot sand"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Leave Austin after work <span class="tag tag-opt">Optional</span></div>
+        <div class="event-body">US-77 S through Kingsville (gas stop, ~2 hrs in), continue to Los Fresnos/Harlingen. ~5 hrs total. Arrive Adolph Thomae Jr. County Park ~10:30–11 pm. Pull in, park, sleep — no setup needed with a pop-up camper.</div>
+      </div>
+    </div>
+
+    <div class="event reveal" style="animation-delay:.1s">
+      <div class="event-time"><span>~11 pm</span><span>Arrive</span></div>
+      <div class="event-line"><div class="event-dot teal"></div></div>
+      <div class="event-card">
+        <div class="event-title">Adolph Thomae Jr. County Park <span class="tag tag-teal">Night 1</span></div>
+        <div class="event-body">Gates open 5:30 am. Waterway site on the Arroyo Colorado, ~$15–20/night dry. Good airflow off the water. Listen for Common Pauraque and Eastern Screech-Owl in the dark — free bonus birds on arrival.</div>
+        <div class="tip">💡 Call Cameron County Parks to confirm late arrival and reserve a waterway-facing dry site: (956) 748-2044</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──────── FRIDAY ──────── -->
+  <div id="fri" class="section">
+    <div class="section-label">Day 1</div>
+    <h2 class="section-title">Friday, May 29</h2>
+    <div class="day-header">
+      <span class="day-label">Dawn birds + remote work</span>
+      <span class="day-sub">Base: Adolph Thomae · 20 min to Los Fresnos</span>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>6:00 am</span><span>Dawn</span></div>
+      <div class="event-line"><div class="event-dot green"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Laguna Atascosa — Bayside Drive auto tour <span class="tag tag-green">Best of trip</span></div>
+        <div class="event-body">Sunrise ~6:27 am. On the road at first light — drive the 15-mile Bayside Drive loop, windows down. June breeding season means White-tailed Hawk on fence posts, Crested Caracara low over grassland, Roseate Spoonbill on tidal flats. Javelinas and White-tailed Deer common at dawn. Back at camp by 9 am.</div>
+        <a class="map-link" href="https://maps.google.com/?q=Laguna+Atascosa+NWR+Los+Fresnos+TX" target="_blank">
+          <span>📍</span> Laguna Atascosa NWR — Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>9:30 am</span></div>
+      <div class="event-line"><div class="event-dot teal"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Remote work at GoodPeople Coffee, Los Fresnos <span class="tag tag-teal">Work day</span></div>
+        <div class="event-body">20 min from camp. Open 6:30 am–6 pm Friday. Reviewers specifically call out fast WiFi and a great work atmosphere — "Good study spot in Los Fresnos… fast WiFi, pleasant atmosphere to get work done." Local, cozy, coffee and pastries. ★ 4.5</div>
+        <div class="work-grid">
+          <div class="work-card featured">
+            <span class="work-badge">★ Recommended</span>
+            <div class="work-name">GoodPeople Coffee</div>
+            <div class="work-body">105 N Arroyo Blvd · Open 6:30am–6pm Fri. Fast WiFi confirmed by reviewers. Locally-sourced coffee, cozy vibe.</div>
+          </div>
+          <div class="work-card">
+            <span class="work-badge">Fallback</span>
+            <div class="work-name">PJ's Coffee</div>
+            <div class="work-body">1010 W Ocean Blvd · Open 6am–9pm Fri. Louisiana chain, beignets, drive-thru + indoor seating.</div>
+          </div>
+        </div>
+        <a class="map-link" href="https://maps.google.com/?q=GoodPeople+Coffee+Los+Fresnos+TX" target="_blank">
+          <span>📍</span> GoodPeople Coffee — Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>Noon–3 pm</span></div>
+      <div class="event-line"><div class="event-dot green"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Laguna Atascosa trails <span class="tag tag-green">Partner hike</span></div>
+        <div class="event-body">Return to the refuge for the Mesquite Trail (1.5 mi) and Paisano Trail (2 mi). Go before 10 am heat peaks or wait for the slight cooling after 5 pm. Partner can run or hike independently. Target: Painted Bunting males on exposed singing perches, Groove-billed Ani, Olive Sparrow, Buff-bellied Hummingbird.</div>
+        <div class="warn">⚠ Wear long pants. Apply DEET to ankles and wrists before every trail session — June chiggers are not optional.</div>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>3–6 pm</span></div>
+      <div class="event-line"><div class="event-dot sand"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Afternoon rest at Thomae waterway</div>
+        <div class="event-body">Camp chairs by the Arroyo Colorado. Good time to cull Friday's SD cards in Lightroom while it's still daylight. Cold drinks, shade, watching herons work the channel edge.</div>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>6–7:30 pm</span></div>
+      <div class="event-line"><div class="event-dot green"></div></div>
+      <div class="event-card">
+        <div class="event-title">Dusk waterway walk <span class="tag tag-green">Bonus birds</span></div>
+        <div class="event-body">Walk the Arroyo Colorado bank at last light — Black-crowned and Yellow-crowned Night-Heron begin fishing, Green Kingfisher possible along the channel edge. Low effort, high reward. Early night — big day tomorrow.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──────── SATURDAY ──────── -->
+  <div id="sat" class="section">
+    <div class="section-label">Day 2 — Best day</div>
+    <h2 class="section-title">Saturday, May 30</h2>
+    <div class="day-header">
+      <span class="day-label">Laguna Atascosa → South Padre Island</span>
+      <span class="day-sub">Move camp: SPI beach north of Access #5</span>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>6:00 am</span><span>Dawn</span></div>
+      <div class="event-line"><div class="event-dot green"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Laguna Atascosa — Bayside Drive + hawk platform <span class="tag tag-green">Top session</span></div>
+        <div class="event-body">Best morning of the trip. After the auto tour, spend time at the hawk observation platform as morning thermals develop. Aplomado Falcon territory is along the grassland edge — scan fence lines and isolated perches. The RF 200-800 at 800mm on the R7's APS-C crop (1,280mm equiv.) earns its rental fee on these distant open-country birds.</div>
+        <div class="tip">💡 Check eBird "Explore Nearby" the night before for any rare sightings at Laguna Atascosa in the last 48 hrs. Local birders post daily.</div>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>9–10 am</span></div>
+      <div class="event-line"><div class="event-dot teal"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Break camp → drive to South Padre Island <span class="tag tag-teal">50 min</span></div>
+        <div class="event-body">Pack up Thomae, drive via Queen Isabella Causeway. Stop in Los Fresnos or Port Isabel for fuel and ice before the island. Deflate truck tires to ~20 psi before driving onto the beach. Drive north of Beach Access #5 and position well above the high tide line with the truck nose facing southeast into the prevailing wind.</div>
+        <div class="warn">⚠ Check NOAA tide tables before positioning — set up at least 30 ft above the high tide line. Re-inflate to road pressure before leaving Sunday morning.</div>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>11 am–1 pm</span></div>
+      <div class="event-line"><div class="event-dot green"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">SPI Birding Center — boardwalk + 5-story tower <span class="tag tag-green">Coastal birds</span></div>
+        <div class="event-body">5-min drive south from beach camp. Reddish Egret doing its erratic lurching hunt (one of the most entertaining behaviors in North American birding), Tricolored Heron, Black-necked Stilt with chicks, American Avocet on the flats. 5-story tower gives panoramic Laguna Madre views — worth the climb for both of you.</div>
+        <a class="map-link" href="https://maps.google.com/?q=SPI+Birding+Nature+Center+South+Padre+Island+TX" target="_blank">
+          <span>📍</span> SPI Birding &amp; Nature Center — Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>1–4 pm</span></div>
+      <div class="event-line"><div class="event-dot amber"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Sea Turtle Inc. + Gulf beach <span class="tag tag-amber">Partner highlight</span></div>
+        <div class="event-body">Open Tue–Sun ✓ — walk 200 yards from the Birding Center. June is peak nesting season with maximum active rescues and rehab cases. After, Gulf beach time directly from camp — swim, walk the tide line for shorebirds, decompress in the southeast breeze.</div>
+        <a class="map-link" href="https://maps.google.com/?q=Sea+Turtle+Inc+South+Padre+Island+TX" target="_blank">
+          <span>📍</span> Sea Turtle Inc. — Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>7:30 pm</span><span>⭐ Dinner</span></div>
+      <div class="event-line"><div class="event-dot amber"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Dirty Al's Pelican Station, Port Isabel <span class="tag tag-amber">The nice dinner</span></div>
+        <div class="event-body">10-min drive across the causeway. Bay views of the Queen Isabella Bridge and Laguna Madre. Order the Red Snapper Rockefeller or Shrimp Rockefeller — the Gulf seafood preparation they're known for. 4.5 ★ from 2,700+ reviews. Open until 11 pm Saturday.</div>
+        <a class="map-link" href="https://maps.google.com/?q=Dirty+Al's+Pelican+Station+Port+Isabel+TX" target="_blank">
+          <span>📍</span> Dirty Al's Pelican Station — Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>9:30 pm</span></div>
+      <div class="event-line"><div class="event-dot teal"></div></div>
+      <div class="event-card">
+        <div class="event-title">Return to SPI beach camp <span class="tag tag-teal">Best night</span></div>
+        <div class="event-body">The Gulf's southeast breeze runs 10–20 mph most May/June nights. Orient the pop-up screen side into the wind and you'll sleep meaningfully cooler than any inland site. Set the alarm for 6:15 am.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──────── SUNDAY ──────── -->
+  <div id="sun" class="section">
+    <div class="section-label">Day 3 — Last morning</div>
+    <h2 class="section-title">Sunday, May 31</h2>
+    <div class="day-header">
+      <span class="day-label">Final dawn → drive home</span>
+      <span class="day-sub">Home to Austin by 3–4 pm</span>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>6:15 am</span><span>Dawn</span></div>
+      <div class="event-line"><div class="event-dot green"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">SPI Birding Center — final session <span class="tag tag-green">Last morning</span></div>
+        <div class="event-body">Check eBird overnight before heading over. Sunday in early June can still produce lingering Painted Buntings and Indigo Buntings in the hotel gardens along Padre Blvd. Work the boardwalk one more time — different tide, different light, often different birds than Saturday. 90 minutes max, then back to break camp.</div>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>8–9 am</span></div>
+      <div class="event-line"><div class="event-dot sand"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Break beach camp + re-inflate tires</div>
+        <div class="event-body">Re-inflate to road pressure before driving off the beach. Drive to Port Isabel, grab breakfast tacos before the causeway. Head north on US-77/US-281 — clean shot to Austin with light Sunday morning traffic.</div>
+        <div class="tip">💡 Old Port Isabel Road (5-min detour off Hwy 100 before the causeway) is worth a slow truck roll — White-tailed Hawk and Crested Caracara regularly visible from the window. Adds 20 minutes, zero hiking.</div>
+      </div>
+    </div>
+
+    <div class="event reveal">
+      <div class="event-time"><span>9:30 am</span></div>
+      <div class="event-line"><div class="event-dot coral"></div></div>
+      <div class="event-card">
+        <div class="event-title">Drive US-77 N → Austin <span class="tag tag-coral">~5 hrs</span></div>
+        <div class="event-body">Home by 3 pm. Import SD cards into Lightroom that evening while the trip is fresh. Run Denoise on the best Reddish Egret and raptor shots. Ship the lens rental return label Monday morning.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──────── DINING ──────── -->
+  <div id="dining" class="section">
+    <div class="section-label">Food & Drink</div>
+    <h2 class="section-title">Dining Guide</h2>
+
+    <div class="dining-hero reveal">
+      <div class="dining-eyebrow">⭐ The Nice Dinner · Saturday, 7:30 pm</div>
+      <div class="dining-name">Dirty Al's Pelican Station</div>
+      <div class="dining-body">
+        201 S Garcia St, Port Isabel · 10 min across the causeway from SPI beach camp · Bay views of the Queen Isabella Bridge and Laguna Madre · 4.5 ★ from 2,700+ reviews — the most consistent standout dining recommendation in the area by a wide margin. Open 11am–11pm Saturday.
+      </div>
+      <div class="dining-chips">
+        <span class="dining-chip">Red Snapper Rockefeller</span>
+        <span class="dining-chip">Shrimp Rockefeller</span>
+        <span class="dining-chip">Full bar</span>
+        <span class="dining-chip">Bay views</span>
+        <span class="dining-chip">No reservation needed</span>
+        <span class="dining-chip">Arrive by 7:30 pm</span>
+      </div>
+    </div>
+
+    <div class="dining-alts reveal">
+      <div class="dining-alt">
+        <div class="dining-alt-name">Padre Island Brewing Co.</div>
+        <div class="dining-alt-body">3400 Padre Blvd · On the island · Casual gastropub, craft beer, peel-and-eat shrimp, seared ahi. No reservations, open daily. ★ 4.4</div>
+      </div>
+      <div class="dining-alt">
+        <div class="dining-alt-name">Wanna Wanna Beach Bar</div>
+        <div class="dining-alt-body">Gulf side · Open air, right on the beach · Ceviche, oysters, cold drinks. Live music some Saturdays. Easy walk from beach camp. ★ 4.5</div>
+      </div>
+    </div>
+
+    <div style="margin-top: 12px" class="reveal">
+      <div class="section-label">Coffee & Remote Work · Friday</div>
+      <div class="dining-alts">
+        <div class="dining-alt" style="border-color: rgba(74,184,160,0.25);">
+          <div class="dining-alt-name" style="color: var(--teal);">★ GoodPeople Coffee</div>
+          <div class="dining-alt-body">105 N Arroyo Blvd, Los Fresnos · Open 6:30am–6pm Fri · Fast WiFi, work-friendly atmosphere confirmed by reviewers. ★ 4.5</div>
+        </div>
+        <div class="dining-alt">
+          <div class="dining-alt-name">PJ's Coffee</div>
+          <div class="dining-alt-body">1010 W Ocean Blvd, Los Fresnos · Open 6am–9pm Fri · Beignets, lattes, drive-thru + indoor seating. Fallback option. ★ 4.4</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──────── CAMPING ──────── -->
+  <div id="camping" class="section reveal">
+    <div class="section-label">Where to sleep</div>
+    <h2 class="section-title">Camping</h2>
+
+    <div class="event">
+      <div class="event-time"><span>Night 1</span><span>Thu/Fri</span></div>
+      <div class="event-line"><div class="event-dot teal"></div><div class="event-stripe"></div></div>
+      <div class="event-card">
+        <div class="event-title">Adolph Thomae Jr. County Park <span class="tag tag-teal">2 nights</span></div>
+        <div class="event-body">Waterway camping on the Arroyo Colorado · ~$15–20/night dry · Gates open 5:30 am · 20 min to Los Fresnos, 30 min to Laguna Atascosa, 50 min to SPI · Good airflow off the water · Reserve ahead: (956) 748-2044</div>
+        <a class="map-link" href="https://maps.google.com/?q=Adolph+Thomae+Jr+County+Park+Los+Fresnos+TX" target="_blank">
+          <span>📍</span> Adolph Thomae Jr. County Park — Google Maps
+        </a>
+      </div>
+    </div>
+
+    <div class="event">
+      <div class="event-time"><span>Night 3</span><span>Sat</span></div>
+      <div class="event-line"><div class="event-dot green"></div></div>
+      <div class="event-card">
+        <div class="event-title">SPI Beach — north of Beach Access #5 <span class="tag tag-green">Free / low cost</span></div>
+        <div class="event-body">Drive-on Gulf beach camping · Vehicle access fee ~$15 · 4WD required for best spots · Deflate to ~20 psi, position 30+ ft above high tide line · Southeast Gulf breeze 10–20 mph overnight — orient pop-up screen side into wind · 5-min drive to Birding Center · Check NOAA tides before positioning</div>
+        <div class="tip">💡 Check SpaceX Starbase launch schedule — road closures along Hwy 4 can affect Boca Chica area but not SPI beach access.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──────── SPECIES ──────── -->
+  <div id="species" class="section reveal">
+    <div class="section-label">Target species · June breeding season</div>
+    <h2 class="section-title">What to Expect</h2>
+
+    <div style="margin-bottom: 12px">
+      <div class="section-label" style="margin-bottom: 6px">Laguna Atascosa NWR</div>
+      <div class="species-grid">
+        <div class="species-item"><span class="species-dot" style="background:var(--green)"></span>White-tailed Hawk</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--green)"></span>Crested Caracara</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--amber)"></span>Aplomado Falcon*</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--green)"></span>Painted Bunting ♂</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--green)"></span>Groove-billed Ani</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--green)"></span>Roseate Spoonbill</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--green)"></span>Buff-bellied Hummer</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--green)"></span>Long-billed Thrasher</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--green)"></span>Olive Sparrow</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--teal)"></span>Common Pauraque</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--teal)"></span>Javelina (mammal)</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--teal)"></span>American Alligator</div>
+      </div>
+    </div>
+
+    <div>
+      <div class="section-label" style="margin-bottom: 6px">South Padre Island</div>
+      <div class="species-grid">
+        <div class="species-item"><span class="species-dot" style="background:var(--coral)"></span>Reddish Egret</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--coral)"></span>Tricolored Heron</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--coral)"></span>Black Skimmer</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--coral)"></span>Elegant Tern</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--coral)"></span>Black-necked Stilt</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--coral)"></span>Magnificent Frigatebird</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--amber)"></span>Painted Bunting*</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--amber)"></span>Indigo Bunting*</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--coral)"></span>Least Tern</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--coral)"></span>Yellow-cr. Night-Heron</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--coral)"></span>American Avocet</div>
+        <div class="species-item"><span class="species-dot" style="background:var(--teal)"></span>Bottlenose Dolphin</div>
+      </div>
+      <div style="font-size: 10.5px; color: var(--text3); margin-top: 8px; font-style: italic;">* Possible but not guaranteed in early June — late migrants.</div>
+    </div>
+  </div>
+
+  <!-- ──────── BUDGET ──────── -->
+  <div id="budget" class="section reveal">
+    <div class="section-label">Money</div>
+    <h2 class="section-title">Trip Budget</h2>
+    <p style="font-size: 12px; color: var(--text2); margin-bottom: 12px;">Own truck camper · Excludes food, coffee, and groceries</p>
+
+    <div class="budget-card">
+      <div class="budget-row"><span class="budget-label">Adolph Thomae Jr. Park — 2 nights (~$18/night)</span><span class="budget-val">~$36</span></div>
+      <div class="budget-row"><span class="budget-label">SPI beach camping — 1 night (vehicle access fee)</span><span class="budget-val">~$15</span></div>
+      <div class="budget-row"><span class="budget-label">Fuel — Austin roundtrip ~540 mi</span><span class="budget-val">~$90</span></div>
+      <div class="budget-row"><span class="budget-label">Laguna Atascosa entrance + SPI Birding Center</span><span class="budget-val">~$25</span></div>
+      <div class="budget-row"><span class="budget-label">Sea Turtle Inc. (2 people)</span><span class="budget-val">~$28</span></div>
+      <div class="budget-row"><span class="budget-label">Dirty Al's Saturday dinner (2 people + drinks)</span><span class="budget-val">~$85–100</span></div>
+      <div class="budget-row"><span class="budget-label">RF 200-800 lens rental — 3–4 days (Thu → Mon return)</span><span class="budget-val">~$100–130</span></div>
+      <div class="budget-total">
+        <span class="budget-total-label">Total (excl. food)</span>
+        <span class="budget-total-val">~$380–425</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ──────── PREP CHECKLIST ──────── -->
+  <div id="prep" class="section reveal">
+    <div class="section-label">Before you go</div>
+    <h2 class="section-title">Pre-Trip Checklist</h2>
+
+    <div class="budget-card" style="padding: 14px 16px;">
+      <ul class="checklist" id="checklist">
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Reserve Adolph Thomae Jr. County Park
+            <span class="check-sub">Call (956) 748-2044 · Confirm late Thu night arrival · Request waterway-facing dry site</span>
+          </div>
+        </li>
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Order RF 200-800 lens rental from Lensrentals
+            <span class="check-sub">Ship to Austin address · Thu delivery · Include Monday return label</span>
+          </div>
+        </li>
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Check NOAA tide predictions for SPI June 7–8
+            <span class="check-sub">tidesandcurrents.noaa.gov · Note high tide time before driving onto beach</span>
+          </div>
+        </li>
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Download eBird offline for Cameron County
+            <span class="check-sub">Laguna Atascosa has limited cell service — download the county ahead of time</span>
+          </div>
+        </li>
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Check BirdCast migration forecast night before each morning
+            <span class="check-sub">birdcast.info — particularly valuable for SPI Saturday dawn session</span>
+          </div>
+        </li>
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Pack DEET (essential — not optional)
+            <span class="check-sub">June thornscrub chiggers at Laguna Atascosa are serious. Apply to ankles + wrists before every trail session.</span>
+          </div>
+        </li>
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Format SD card in-camera after confirming two backup copies
+            <span class="check-sub">Canon R7 → Setup → Format Card · Never format before importing</span>
+          </div>
+        </li>
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Check SpaceX Starbase launch schedule
+            <span class="check-sub">Hwy 4 closures near Boca Chica won't affect SPI but good to know</span>
+          </div>
+        </li>
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Pack tire pressure gauge + know your beach PSI target
+            <span class="check-sub">Deflate to ~20 psi for sand · Re-inflate to road pressure before leaving beach</span>
+          </div>
+        </li>
+        <li>
+          <div class="check-box" onclick="toggleCheck(this)"></div>
+          <div class="check-text">Save GoodPeople Coffee address offline
+            <span class="check-sub">105 N Arroyo Blvd, Los Fresnos TX · Open Fri 6:30am–6pm</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+</main>
+
+<!-- ═══════════════ FOOTER ═══════════════ -->
+<footer class="footer">
+  <div class="footer-title">Good light & good birds.</div>
+  <div class="footer-sub">South Texas · May 28–31, 2026 · Canon R7 + RF 200–800mm</div>
+</footer>
+
+<script>
+  // Smooth scroll to section
+  function scrollTo(id) {
+    const el = document.getElementById(id);
+    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  // Intersection observer for reveal animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  // Stagger event cards
+  document.querySelectorAll('.event').forEach((el, i) => {
+    el.style.animationDelay = `${i * 0.04}s`;
+  });
+
+  // Active nav on scroll
+  const sections = ['thu','fri','sat','sun','dining','camping','species','budget','prep'];
+  const navBtns = document.querySelectorAll('.nav-btn');
+
+  const scrollObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        const idx = sections.indexOf(id);
+        navBtns.forEach((b, i) => b.classList.toggle('active', i === idx));
+      }
+    });
+  }, { threshold: 0.3 });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) scrollObserver.observe(el);
+  });
+
+  // Checklist persistence
+  function toggleCheck(el) {
+    el.classList.toggle('checked');
+    saveChecklist();
+  }
+
+  function saveChecklist() {
+    const boxes = document.querySelectorAll('.check-box');
+    const state = [...boxes].map(b => b.classList.contains('checked'));
+    try { localStorage.setItem('stx_checklist', JSON.stringify(state)); } catch(e) {}
+  }
+
+  function loadChecklist() {
+    try {
+      const state = JSON.parse(localStorage.getItem('stx_checklist') || '[]');
+      const boxes = document.querySelectorAll('.check-box');
+      state.forEach((checked, i) => {
+        if (boxes[i] && checked) boxes[i].classList.add('checked');
+      });
+    } catch(e) {}
+  }
+
+  loadChecklist();
+
+  // PWA install prompt
+  let deferredPrompt;
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+  });
+</script>
+
+</body>
+</html>
