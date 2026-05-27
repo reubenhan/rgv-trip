@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#0c1c0c">
+<meta name="description" content="Port Aransas & Padre Island National Seashore · May 28–31, 2026">
+<meta property="og:title" content="Port Aransas & PINS · May 28–31, 2026">
+<title>Port Aransas & Padre Island · May 28–31, 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;1,400&family=DM+Mono:wght@300;400&family=Mulish:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#0c1c0c;--paper:#f0ebe0;--card:#fff;--sand:#e4d9c0;
+  --sage:#3d7050;--sage-lt:#72a882;--sage-bg:rgba(61,112,80,.09);
+  --teal:#28857a;--teal-bg:rgba(40,133,122,.08);
+  --amber:#b87a20;--amber-bg:rgba(184,122,32,.09);
+  --rust:#a04828;--rust-bg:rgba(160,72,40,.09);
+  --mist:#cfe0d4;
+  --bd:rgba(61,112,80,.16);--bd2:rgba(61,112,80,.32);
+  --t3:rgba(12,28,12,.38);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font-family:'Mulish',sans-serif;font-weight:300;overflow-x:hidden;font-size:16px}
+body::after{content:'';position:fixed;inset:0;pointer-events:none;z-index:9999;opacity:.5;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)' opacity='.04'/%3E%3C/svg%3E")}
+
+/* ── HERO ── */
+.hero{min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden;background:var(--ink);padding-bottom:4rem}
+.hbg{position:absolute;inset:0;
+  background:radial-gradient(ellipse 90% 50% at 60% 20%,rgba(61,112,80,.1) 0%,transparent 60%),
+             radial-gradient(ellipse 60% 70% at 10% 80%,rgba(40,133,122,.07) 0%,transparent 55%)}
+.hgrid{position:absolute;inset:0;
+  background-image:linear-gradient(rgba(61,112,80,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(61,112,80,.05) 1px,transparent 1px);
+  background-size:48px 48px}
+.hscan{position:absolute;left:0;right:0;height:1px;
+  background:linear-gradient(90deg,transparent,var(--sage) 25%,var(--teal) 50%,var(--sage) 75%,transparent);
+  animation:scan 9s ease-in-out infinite;opacity:.35}
+@keyframes scan{0%{top:15%;opacity:0}8%{opacity:.35}92%{opacity:.35}100%{top:88%;opacity:0}}
+.hi{position:relative;z-index:1;max-width:740px;margin:0 auto;padding:0 2rem}
+.heyebrow{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--sage-lt);margin-bottom:1.1rem;opacity:0;animation:up .5s .1s forwards}
+.htitle{font-family:'Playfair Display',serif;font-size:clamp(38px,9vw,72px);font-weight:500;line-height:1.02;color:#f0ebe0;margin-bottom:.55rem;opacity:0;animation:up .65s .28s forwards}
+.htitle em{font-style:italic;color:var(--sage-lt)}
+.hsub{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(14px,3vw,19px);color:rgba(240,235,224,.5);margin-bottom:2rem;opacity:0;animation:up .65s .44s forwards}
+.hpills{display:flex;flex-wrap:wrap;gap:7px;opacity:0;animation:up .65s .58s forwards}
+.hpill{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.07em;padding:5px 11px;border-radius:2px;border:1px solid rgba(61,112,80,.3);color:rgba(240,235,224,.5);background:rgba(61,112,80,.07)}
+@keyframes up{from{opacity:0;transform:translateY(13px)}to{opacity:1;transform:translateY(0)}}
+
+/* ── NAV ── */
+.nav{position:sticky;top:0;z-index:100;background:rgba(12,28,12,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--bd)}
+.nav-r{max-width:740px;margin:0 auto;display:flex;overflow-x:auto;scrollbar-width:none;padding:0 .75rem}
+.nav-r::-webkit-scrollbar{display:none}
+.nb{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.11em;text-transform:uppercase;color:rgba(240,235,224,.32);padding:12px 13px;border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;white-space:nowrap;flex-shrink:0}
+.nb:hover,.nb.on{color:var(--sage-lt);border-bottom-color:var(--sage)}
+
+/* ── WRAPPER ── */
+.wrap{max-width:740px;margin:0 auto;padding:0 1.5rem 5rem}
+
+/* ── SECTION ── */
+.sec{padding-top:3.5rem}
+.mono{font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--sage);margin-bottom:.7rem}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(22px,5vw,32px);font-weight:500;color:var(--ink);margin-bottom:1.25rem;line-height:1.15}
+
+/* ── OVERVIEW GRID ── */
+.ov-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:10px}
+.ov-cell{background:rgba(255,255,255,.6);border:1px solid var(--bd);border-radius:3px;padding:10px 12px;text-align:center}
+.ov-lbl{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);margin-bottom:4px}
+.ov-val{font-size:13px;font-weight:500}
+.ov-sub{font-size:10.5px;color:var(--t3);margin-top:1px}
+
+/* ── CAMP BANNER ── */
+.cb{display:flex;align-items:center;flex-wrap:wrap;gap:8px;background:var(--mist);border:1px solid var(--bd2);border-radius:3px;padding:9px 14px;margin-bottom:1.25rem}
+.cb-lbl{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);flex-shrink:0}
+.cb-val{font-size:13px;font-weight:500}
+.cb-note{font-size:11px;color:var(--sage);margin-left:auto;font-style:italic;font-family:'Playfair Display',serif}
+
+/* ── OPTIONAL CARD ── */
+.opt{background:rgba(255,255,255,.3);border:1px dashed rgba(12,28,12,.15);border-radius:3px;padding:9px 13px;margin-bottom:10px;font-size:12px;color:var(--t3);line-height:1.6}
+.opt strong{display:block;color:rgba(12,28,12,.6);font-weight:500;font-size:13px;margin-bottom:2px}
+
+/* ── TIMELINE ── */
+.block{display:flex;gap:13px;margin-bottom:9px}
+.btime{width:58px;flex-shrink:0;text-align:right;padding-top:12px}
+.btime span{font-family:'DM Mono',monospace;font-size:9px;color:var(--t3);line-height:1.5;display:block}
+.bline{display:flex;flex-direction:column;align-items:center;flex-shrink:0;width:14px}
+.dot{width:8px;height:8px;border-radius:50%;border:1.5px solid var(--bd2);background:var(--sand);flex-shrink:0;margin-top:14px}
+.dot.g{border-color:var(--sage);background:var(--sage-bg)}
+.dot.t{border-color:var(--teal);background:var(--teal-bg)}
+.dot.a{border-color:var(--amber);background:var(--amber-bg)}
+.dot.r{border-color:var(--rust);background:var(--rust-bg)}
+.rule{flex:1;width:1px;background:var(--bd);margin-top:3px}
+.card{flex:1;padding:10px 13px;background:rgba(255,255,255,.6);border:1px solid var(--bd);border-radius:3px;transition:background .2s,border-color .2s}
+.card:hover{background:rgba(255,255,255,.85);border-color:var(--bd2)}
+.ctitle{font-size:13.5px;font-weight:500;color:var(--ink);margin-bottom:3px;display:flex;flex-wrap:wrap;align-items:center;gap:5px;line-height:1.3}
+.cbody{font-size:12px;color:rgba(12,28,12,.6);line-height:1.62}
+.tag{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:2px;white-space:nowrap;flex-shrink:0}
+.tg{background:var(--sage-bg);color:var(--sage);border:1px solid rgba(61,112,80,.22)}
+.tt{background:var(--teal-bg);color:var(--teal);border:1px solid rgba(40,133,122,.22)}
+.ta{background:var(--amber-bg);color:var(--amber);border:1px solid rgba(184,122,32,.22)}
+.tr{background:var(--rust-bg);color:var(--rust);border:1px solid rgba(160,72,40,.22)}
+.tx{background:rgba(12,28,12,.04);color:var(--t3);border:1px solid var(--bd)}
+.tip{margin-top:7px;padding:6px 10px;background:var(--teal-bg);border-left:2px solid var(--teal);border-radius:0 3px 3px 0;font-size:11px;color:var(--teal);line-height:1.55}
+.warn{margin-top:7px;padding:6px 10px;background:var(--amber-bg);border-left:2px solid var(--amber);border-radius:0 3px 3px 0;font-size:11px;color:var(--amber);line-height:1.55}
+.mlink{display:inline-flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:9px;letter-spacing:.06em;text-transform:uppercase;color:var(--sage);text-decoration:none;margin-top:7px;border-bottom:1px solid rgba(61,112,80,.22);padding-bottom:1px;transition:border-color .2s}
+.mlink:hover{border-color:var(--sage)}
+
+/* ── DINING HERO ── */
+.dhero{background:var(--ink);border-radius:3px;padding:17px 19px;margin-bottom:10px;position:relative;overflow:hidden}
+.dhero::before{content:'';position:absolute;top:-24px;right:-24px;width:110px;height:110px;border-radius:50%;background:radial-gradient(circle,rgba(184,122,32,.12),transparent 70%)}
+.deye{font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);margin-bottom:5px}
+.dname{font-family:'Playfair Display',serif;font-size:21px;color:#f0ebe0;margin-bottom:4px}
+.dbody{font-size:12px;color:rgba(240,235,224,.5);line-height:1.6;margin-bottom:9px}
+.dchips{display:flex;flex-wrap:wrap;gap:5px}
+.dchip{font-size:9.5px;padding:3px 9px;border-radius:2px;background:rgba(184,122,32,.1);border:1px solid rgba(184,122,32,.18);color:rgba(240,235,224,.65)}
+.drow{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.dcell{padding:11px 13px;background:rgba(255,255,255,.6);border:1px solid var(--bd);border-radius:3px}
+.dcname{font-size:13px;font-weight:500;margin-bottom:3px}
+.dcbody{font-size:11.5px;color:var(--t3);line-height:1.55}
+
+/* ── SPECIES ── */
+.spgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(142px,1fr));gap:5px;margin-top:6px}
+.spi{display:flex;align-items:center;gap:7px;font-size:11.5px;background:rgba(255,255,255,.5);border:1px solid var(--bd);border-radius:3px;padding:6px 9px}
+.spd{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
+/* ── OPTIONAL ACTIVITY GRID ── */
+.actgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px}
+.actcard{padding:12px 13px;background:rgba(255,255,255,.6);border:1px solid var(--bd);border-radius:3px}
+.acticon{font-size:17px;margin-bottom:5px;display:block}
+.actname{font-size:13px;font-weight:500;margin-bottom:3px}
+.actbody{font-size:11.5px;color:var(--t3);line-height:1.55}
+.actbadge{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.06em;text-transform:uppercase;color:var(--amber);margin-bottom:4px;display:block}
+
+/* ── CAMPING CARDS ── */
+.campgrid{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:10px}
+.campcard{padding:11px 13px;background:rgba(255,255,255,.6);border:1px solid var(--bd);border-radius:3px}
+.campcard.on{border-color:var(--sage);background:var(--mist)}
+.campnight{font-family:'DM Mono',monospace;font-size:8px;letter-spacing:.1em;text-transform:uppercase;color:var(--sage);margin-bottom:3px;display:block}
+.campname{font-size:13px;font-weight:500;margin-bottom:3px}
+.campbody{font-size:11.5px;color:var(--t3);line-height:1.55}
+
+/* ── BUDGET ── */
+.budgetcard{background:rgba(255,255,255,.65);border:1px solid var(--bd);border-radius:3px;padding:15px 17px}
+.brow{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--bd);font-size:12.5px}
+.brow:last-of-type{border:none}
+.blabel{color:var(--t3)}
+.bval{font-family:'DM Mono',monospace;font-size:11px}
+.btot{display:flex;justify-content:space-between;padding:10px 0 0;margin-top:4px;border-top:1px solid var(--bd2);font-size:14px}
+.btlabel{font-weight:500}
+.btval{font-family:'DM Mono',monospace;font-size:13px;color:var(--sage)}
+
+/* ── CHECKLIST ── */
+.ckl{list-style:none}
+.cki{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--bd);font-size:12.5px}
+.cki:last-child{border:none}
+.ckb{width:17px;height:17px;border-radius:3px;border:1.5px solid var(--bd2);flex-shrink:0;cursor:pointer;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:background .15s,border-color .15s}
+.ckb.on{background:var(--sage);border-color:var(--sage)}
+.ckb.on::after{content:'✓';font-size:9.5px;color:#fff;font-weight:700}
+.cktxt{flex:1;line-height:1.4}
+.cksub{font-size:11px;color:var(--t3);display:block;margin-top:2px}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(11px);transition:opacity .48s,transform .48s}
+.rv.vis{opacity:1;transform:translateY(0)}
+
+/* ── FOOTER ── */
+.footer{text-align:center;padding:2.75rem 1.5rem 2rem;border-top:1px solid var(--bd);margin-top:3rem}
+.ftitle{font-family:'Playfair Display',serif;font-style:italic;font-size:17px;color:var(--t3);margin-bottom:4px}
+.fsub{font-family:'DM Mono',monospace;font-size:8.5px;color:rgba(12,28,12,.25);letter-spacing:.09em}
+
+@media(max-width:500px){
+  .drow,.actgrid,.campgrid,.ov-grid{grid-template-columns:1fr}
+  .spgrid{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hbg"></div><div class="hgrid"></div><div class="hscan"></div>
+  <div class="hi">
+    <div class="heyebrow">Canon R7 · RF 200–800mm · Texas Gulf Coast</div>
+    <h1 class="htitle">Port Aransas<br>&amp; <em>Padre Island</em><br>National Seashore</h1>
+    <div class="hsub">May 28 – 31, 2026 · One base + one optional move</div>
+    <div class="hpills">
+      <span class="hpill">📅 Thu–Sun</span>
+      <span class="hpill">🏕 Mustang Island SP · 2 nights confirmed</span>
+      <span class="hpill">⛺ PINS optional Sat night</span>
+      <span class="hpill">🐦 380 species · PINS</span>
+      <span class="hpill">🐢 Sea turtle nesting season</span>
+      <span class="hpill">⏱ ~3 hrs from Austin</span>
+    </div>
+  </div>
+</section>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-r">
+    <button class="nb" onclick="J('overview')">Overview</button>
+    <button class="nb" onclick="J('thu')">Thu</button>
+    <button class="nb" onclick="J('fri')">Fri</button>
+    <button class="nb" onclick="J('sat')">Sat</button>
+    <button class="nb" onclick="J('sun')">Sun</button>
+    <button class="nb" onclick="J('optional')">Optional</button>
+    <button class="nb" onclick="J('camping')">Camp</button>
+    <button class="nb" onclick="J('dining')">Dining</button>
+    <button class="nb" onclick="J('species')">Species</button>
+    <button class="nb" onclick="J('budget')">Budget</button>
+    <button class="nb" onclick="J('prep')">Prep</button>
+  </div>
+</nav>
+
+<main class="wrap">
+
+<!-- OVERVIEW -->
+<div id="overview" class="sec rv">
+  <div class="mono">Trip structure</div>
+  <h2 class="stitle">How this trip works</h2>
+  <div style="background:var(--ink);border-radius:3px;padding:13px 17px;margin-bottom:12px">
+    <div style="font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--sage-lt);margin-bottom:6px">Structure at a glance</div>
+    <div style="font-size:12.5px;color:rgba(240,235,224,.58);line-height:1.65">
+      <strong style="color:#f0ebe0;display:block;margin-bottom:5px">Thu–Fri: Mustang Island State Park (2 confirmed nights)</strong>
+      Thursday: arrive and sleep. Friday: remote work until 3pm in Port Aransas, afternoon birding at Leonabelle Turnbull and UTMSI, evening birding at Leonabelle Turnbull again for golden-hour light, nice dinner at Tortuga's.<br><br>
+      <strong style="color:#f0ebe0;display:block;margin-bottom:5px">Sat: Optional move to PINS (or stay Mustang Island)</strong>
+      If you want a genuine wilderness night, pack up Saturday morning and drive 15 min to PINS — Bird Island Basin ($8, first-come) or South Beach primitive (free with ATB pass). If you'd rather stay put, Mustang Island works fine for Saturday night too with no additional reservation needed if you booked 3 nights.<br><br>
+      <strong style="color:#f0ebe0;display:block;margin-bottom:5px">Sun: Final birding stop → nice breakfast → Austin by noon</strong>
+    </div>
+  </div>
+  <div class="ov-grid">
+    <div class="ov-cell"><div class="ov-lbl">Drive</div><div class="ov-val">~3 hrs</div><div class="ov-sub">Austin to camp</div></div>
+    <div class="ov-cell"><div class="ov-lbl">Camp</div><div class="ov-val">Confirmed</div><div class="ov-sub">2 nights Mustang SP</div></div>
+    <div class="ov-cell"><div class="ov-lbl">Species</div><div class="ov-val">380</div><div class="ov-sub">Recorded at PINS</div></div>
+  </div>
+</div>
+
+<!-- THURSDAY -->
+<div id="thu" class="sec">
+  <div class="mono">Day 0</div>
+  <h2 class="stitle">Thursday, May 28</h2>
+
+  <div class="cb rv">
+    <span class="cb-lbl">Camp</span>
+    <span class="cb-val">Mustang Island State Park · Night 1 ✓</span>
+    <span class="cb-note">Reserved · water & electric · $25</span>
+  </div>
+
+  <div class="opt rv">
+    <strong>⬜ Optional — leave after work</strong>
+    Departing Austin ~5pm puts you at camp by 8:30–9pm, full night of rest before Friday. Works equally well leaving Friday morning — but Thursday arrival removes all time pressure.
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>5–6 pm</span><span>Austin</span></div>
+    <div class="bline"><div class="dot"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Leave Austin · I-37 S → TX-358 E → TX-361 N <span class="tag tx">~3 hrs</span></div>
+      <div class="cbody">I-37 south to Corpus Christi, TX-358 east to JFK Causeway, then TX-361 north to Mustang Island State Park. No ferry required. Gas up in Corpus Christi before the causeway.</div>
+      <div class="tip">💡 Gate closes 10pm. Call (361) 749-5246 before 4:30pm Thursday if arriving after 9:30pm for late-arrival procedure.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>~9 pm</span></div>
+    <div class="bline"><div class="dot t"></div></div>
+    <div class="card">
+      <div class="ctitle">Arrive Mustang Island State Park <span class="tag tt">Night 1</span></div>
+      <div class="cbody">Water & electric hookup, confirmed reservation. Hook up, sleep. Gulf audible over the dunes. Coastal breeze makes the 80°F nights comfortable in a pop-up. Showers and bathrooms on-site. Common Nighthawks calling overhead after dark.</div>
+    </div>
+  </div>
+</div>
+
+<!-- FRIDAY -->
+<div id="fri" class="sec">
+  <div class="mono">Day 1</div>
+  <h2 class="stitle">Friday, May 29</h2>
+
+  <div class="cb rv">
+    <span class="cb-lbl">Camp</span>
+    <span class="cb-val">Mustang Island State Park · Night 2 ✓</span>
+    <span class="cb-note">No move · stay put</span>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>6:30 am</span><span>Dawn</span></div>
+    <div class="bline"><div class="dot g"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">South Jetty sunrise walk <span class="tag tg">Free · 15 min drive</span></div>
+      <div class="cbody">One of the best sunrise spots on the Texas coast. Brown Pelicans and Royal Terns roost on the jetty rocks at first light, Black Skimmers low over the ship channel. Flat easy walk — no birding agenda required. A genuinely beautiful start for both of you.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>8 am</span></div>
+    <div class="bline"><div class="dot g"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">UT Marine Science Institute Patton Center <span class="tag tg">Free · open Fri 10am</span></div>
+      <div class="cbody">855 E. Cotter Ave — free admission, open Tue–Sat 10am–4pm. Eight large aquaria of Texas coastal habitats. The standout: a submerged jetty-reef tank with a clear cylinder you can stand inside, surrounded by live red drum, sheepshead, and flounder. The adjacent Wetlands Education Center boardwalk overlooks the ship channel — White Ibis and Roseate Spoonbill common. About an hour, genuinely impressive, and one of Port Aransas's most underrated stops.</div>
+      <a class="mlink" href="https://maps.google.com/?q=UT+Marine+Science+Institute+Port+Aransas+TX" target="_blank">↗ Google Maps</a>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>10 am–3 pm</span></div>
+    <div class="bline"><div class="dot t"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Remote work · Coffee Waves Port Aransas <span class="tag tt">Work until 3pm</span></div>
+      <div class="cbody">1007 TX-361 — open 7am–9pm. Free WiFi confirmed by reviewers, cozy seating, great espresso, live music Friday evenings. Voted best coffee shop in Texas. 4.6★ from 1,900+ reviews. Paninis and gelato available for lunch. Your partner has the beach, shops, and Port Aransas town to explore independently while you work.</div>
+      <div class="tip">💡 Park once near Coffee Waves and walk to both the UTMSI (10 min) and Leonabelle Turnbull (8 min). No need to move the truck all day.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>3–5 pm</span></div>
+    <div class="bline"><div class="dot g"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Leonabelle Turnbull Birding Center — afternoon session <span class="tag tg">Free · open at dawn</span></div>
+      <div class="cbody">An 8-minute walk from Coffee Waves. The afternoon light on the ship channel wetlands is softer and often better for photography than harsh morning light. Work the boardwalk slowly — Roseate Spoonbill, Tricolored Heron, Black-bellied Whistling-Duck year-round. Check eBird before you go: a resident flamingo has been documented here for 3+ consecutive years and the afternoon is when it tends to be most visible along the waterway edge.</div>
+      <a class="mlink" href="https://maps.google.com/?q=Leonabelle+Turnbull+Birding+Center+Port+Aransas+TX" target="_blank">↗ Google Maps</a>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>5–6:30 pm</span></div>
+    <div class="bline"><div class="dot g"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Paradise Pond + golden hour birding <span class="tag tg">Free · 5 min away</span></div>
+      <div class="cbody">Walk 5 minutes from Leonabelle Turnbull to Paradise Pond (408 Cut-Off Rd) — a shaded 2-acre freshwater pond with boardwalk and observation decks. The golden hour light is particularly good here for songbirds in the overhanging black willows. End the loop back at Leonabelle for the final light on the channel. Between the two sites you have a complete Port Aransas birding afternoon without moving the truck once.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>7 pm</span><span>⭐ Dinner</span></div>
+    <div class="bline"><div class="dot a"></div></div>
+    <div class="card">
+      <div class="ctitle">Tortuga's Saltwater Grill — the nice dinner <span class="tag ta">Book ahead</span></div>
+      <div class="cbody">429 N Alister St — open Friday from 3pm. The elevated choice on the island. Lobster rolls, fresh Gulf redfish, seafood tower, wine list. 4.4★ from 2,000+ reviews. After a full day of birding and remote work, this is your Friday reward. Call (361) 749-2739 or use OpenTable — Friday nights fill, especially with summer kicking in.</div>
+      <div class="tip">💡 Tortuga's also does Saturday brunch 9am–2pm and Sunday brunch 9am–2pm — the Port A Benny and Shrimp & Grits are consistently raved about.</div>
+      <a class="mlink" href="https://maps.google.com/?q=Tortuga's+Saltwater+Grill+Port+Aransas+TX" target="_blank">↗ Google Maps</a>
+    </div>
+  </div>
+</div>
+
+<!-- SATURDAY -->
+<div id="sat" class="sec">
+  <div class="mono">Day 2</div>
+  <h2 class="stitle">Saturday, May 30</h2>
+
+  <div class="cb rv" style="background:rgba(255,255,255,.4);border-style:dashed">
+    <span class="cb-lbl">Camp</span>
+    <span class="cb-val">PINS optional — or stay Mustang Island</span>
+    <span class="cb-note">See camping section for details</span>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>6:15 am</span><span>Dawn</span></div>
+    <div class="bline"><div class="dot g"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">PINS Malaquite Beach — dawn walk <span class="tag tg">Best birding morning</span></div>
+      <div class="cbody">Drive 15 min to Padre Island National Seashore. Malaquite Beach is vehicle-free — 4.5 miles of undisturbed Gulf shoreline at first light. Walk the tide line for shorebirds: Ruddy Turnstone, Sanderling, Wilson's Plover. Then check the small freshwater pond with NPS bird blind just south of Park HQ — one of the park's best-kept secrets for close encounters. Call the Hatchling Hotline (361) 949-7163 before you go: late May occasionally produces early sea turtle hatchings.</div>
+      <div class="tip">💡 Check BirdCast the night before. A north wind overnight means lingering migrants on the dunes — late May still produces surprise Painted Buntings.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>9–11 am</span></div>
+    <div class="bline"><div class="dot g"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">4WD South Beach drive <span class="tag tg">Signature PINS experience</span></div>
+      <div class="cbody">Deflate to ~20 psi and drive south from Malaquite — 4WD required past mile 5. Up to 60 miles of driveable beach, nesting Least Terns and Wilson's Plovers along the wrack line, virtually no other people past mile 10. Your partner drives, you shoot from the passenger window. Stop wherever birds present themselves. The RF 200-800 at 1280mm equivalent on open tidal flats earns every dollar of the rental.</div>
+      <div class="warn">⚠ Walk your spot before parking — avoid soft sand. Carry extra water — no facilities past mile 5. Re-inflate before leaving the beach.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>Noon</span></div>
+    <div class="bline"><div class="dot t"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Optional: move to PINS camp, or return to Mustang Island <span class="tag tt">Choice point</span></div>
+      <div class="cbody">If you want the PINS overnight experience: after the beach drive, check into Bird Island Basin ($8, vault toilets, Laguna Madre bay views, gravel sites — no reservations, first-come) or self-register for South Beach primitive camping (free with ATB pass, Gulf-facing, total wilderness). Both are 15 min from Malaquite. If you'd rather stay comfortable: return to Mustang Island — hookups, hot showers, reliable spot.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>1–4 pm</span></div>
+    <div class="bline"><div class="dot t"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Beach time · swim · Laguna Madre flats <span class="tag tt">Afternoon freedom</span></div>
+      <div class="cbody">Malaquite Beach for swimming — vehicle-free, clean Gulf water at ~78–82°F in late May. Or the Laguna Madre side at Bird Island Basin for calmer flat water. Late afternoon: scan the tidal flats on the bay side — low tide in the evening light is ideal for Reddish Egret hunting and Long-billed Curlew on exposed mudflats. Check tide chart for timing.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>5:30 pm</span></div>
+    <div class="bline"><div class="dot g"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Evening tidal flats birding + sunset at camp <span class="tag tg">Golden hour</span></div>
+      <div class="cbody">The hour before sunset is the best photography light of the day. Work the Laguna Madre edge — Reddish Egret doing its lunging dance in the shallows is one of the most entertaining and photogenic behaviors in North American birding. Then return to camp for a camp dinner and genuine wilderness sunset — Gulf side for the last light, or Laguna Madre side for the color over the bay.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>Evening</span></div>
+    <div class="bline"><div class="dot"></div></div>
+    <div class="card">
+      <div class="ctitle">Camp dinner at PINS (or Mustang Island) <span class="tag tx">Keep it simple</span></div>
+      <div class="cbody">Cook at camp — tonight is about the experience, not the restaurant. Grill on the tailgate, watch stars emerge (PINS has genuinely dark skies with minimal light pollution), listen to the Gulf or the Laguna Madre depending on which side you're on. Have a cold drink and review the day's shots. Early night — sunrise birding tomorrow.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SUNDAY -->
+<div id="sun" class="sec">
+  <div class="mono">Day 3</div>
+  <h2 class="stitle">Sunday, May 31</h2>
+
+  <div class="block rv">
+    <div class="btime"><span>6:15 am</span><span>Dawn</span></div>
+    <div class="bline"><div class="dot g"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Final birding stop — PINS or Leonabelle Turnbull <span class="tag tg">Last session</span></div>
+      <div class="cbody">Two options depending on camp location. If at PINS: one final walk at Malaquite or Bird Island Basin — different tide, different birds from Saturday. If back at Mustang Island: drive to Leonabelle Turnbull for a morning session — the ship channel at dawn often has different species than afternoon. Check eBird overnight for any new sightings within 5 miles before choosing. Budget 90 minutes max.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>8:30 am</span></div>
+    <div class="bline"><div class="dot"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Break camp · drive to Port Aransas for breakfast</div>
+      <div class="cbody">Break camp cleanly — no beach sand or tire logistics if you stayed at Mustang Island. 10–15 min drive to Port Aransas for the nice Sunday breakfast before heading north.</div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>9–10 am</span><span>🍳 Breakfast</span></div>
+    <div class="bline"><div class="dot a"></div><div class="rule"></div></div>
+    <div class="card">
+      <div class="ctitle">Sunday breakfast — three great options <span class="tag ta">Choose one</span></div>
+      <div class="cbody">
+        <strong style="display:block;margin-bottom:4px;color:var(--ink)">Tortuga's brunch</strong> Open 9am–2pm Sunday. Port A Benny (eggs benedict), Shrimp & Grits, French toast. The nicest option. Call to check wait — popular Sunday spot. ★ 4.4<br><br>
+        <strong style="display:block;margin-bottom:4px;color:var(--ink)">Island Bakery</strong> 200 W Avenue G — open 8am–2pm Sunday. Signature cruffins (croissant-muffin hybrid), sourdough, kolaches, bacon egg and cheese. 4.5★ from 1,669 reviews. Best option if you want to be on the road early — grab and go, or sit in for a relaxed pastry breakfast.<br><br>
+        <strong style="display:block;margin-bottom:4px;color:var(--ink)">Black Marlin Bar & Grill</strong> 258 Snapdragon — Sunday brunch 10am–2pm. Crab eggs benedict, beignets, coastal shrimp and grits. More upscale, beautiful patio. About 10 min south of town. ★ 4.1
+      </div>
+    </div>
+  </div>
+
+  <div class="block rv">
+    <div class="btime"><span>10:30 am</span></div>
+    <div class="bline"><div class="dot r"></div></div>
+    <div class="card">
+      <div class="ctitle">Drive home · I-37 N → Austin <span class="tag tr">~3 hrs · home by 1:30pm</span></div>
+      <div class="cbody">TX-361 north, cross JFK Causeway, I-37 north to Austin. Home by 1:30pm — the whole afternoon free. Import SD cards into Lightroom today while the trip is fresh. Run Denoise on the best shorebird shots. Ship lens rental return label Monday morning.</div>
+    </div>
+  </div>
+</div>
+
+<!-- OPTIONAL ACTIVITIES -->
+<div id="optional" class="sec rv">
+  <div class="mono">Swap-in options</div>
+  <h2 class="stitle">Optional Activities</h2>
+  <p style="font-size:12.5px;color:var(--t3);margin-bottom:14px;line-height:1.6">These replace or supplement the existing schedule depending on your energy and interests. None are required — the core itinerary is complete without them.</p>
+
+  <div class="actgrid">
+    <div class="actcard">
+      <span class="actbadge">Saturday afternoon · swap for beach time</span>
+      <span class="acticon">🛶</span>
+      <div class="actname">Laguna Madre kayak / SUP</div>
+      <div class="actbody">Rentals available in Port Aransas (~15 min from PINS). Flat, warm bay water. Eye-level with Reddish Egrets and Black Skimmers from the water — extraordinary photographic perspective. Best done 10am–1pm before heat peaks. ~$50 for 2 hrs.</div>
+    </div>
+    <div class="actcard">
+      <span class="actbadge">Friday afternoon · replaces Paradise Pond</span>
+      <span class="acticon">🔬</span>
+      <div class="actname">PINS Malaquite on Friday afternoon</div>
+      <div class="actbody">After work at 3pm, drive straight to PINS (15 min) instead of staying in town. Pick up your tide chart at Malaquite Visitor Center (open until 5pm), walk the Grasslands Trail (0.75 mi), and scout Bird Island Basin for Saturday. Gives you a head start on the park before the big Saturday session.</div>
+    </div>
+    <div class="actcard">
+      <span class="actbadge">Saturday morning · before birding</span>
+      <span class="acticon">🌅</span>
+      <div class="actname">PINS South Jetty fishing pier at dawn</div>
+      <div class="actbody">A short walk from the Malaquite parking area. Brown Pelicans and Magnificent Frigatebird visible from the pier at first light. No fishing license needed for the pier observation — just walk out and scan. Great vantage for seabirds before the beach drive.</div>
+    </div>
+    <div class="actcard">
+      <span class="actbadge">Saturday evening · at camp</span>
+      <span class="acticon">🌟</span>
+      <div class="actname">PINS stargazing</div>
+      <div class="actbody">PINS South Beach has genuinely dark skies with minimal light pollution — on a clear night, the Milky Way is visible over the Gulf. After dinner, walk out to the tide line and let your eyes adjust. Common Nighthawk calling overhead, occasional nightjar on the dunes. One of the unexpected highlights of a beach camp night.</div>
+    </div>
+    <div class="actcard">
+      <span class="actbadge">Friday evening · after dinner</span>
+      <span class="acticon">🍺</span>
+      <div class="actname">Port Aransas town walk + waterfront</div>
+      <div class="actbody">After Tortuga's, walk the Port Aransas waterfront — Roberts Point Park overlooks Turtle Cove and the marina. The Tarpon Inn (1900, historic fishing lodge) is worth a peek for its wall of tarpon scales signed by famous guests including FDR. A 15-minute walk from Tortuga's.</div>
+    </div>
+    <div class="actcard">
+      <span class="actbadge">Saturday morning · add-on</span>
+      <span class="acticon">🐢</span>
+      <div class="actname">Sea turtle nest monitoring patrol</div>
+      <div class="actbody">Park volunteers patrol PINS beach at dawn looking for nesting females and fresh tracks. Walk Malaquite Beach early enough and you may encounter an active patrol — rangers are happy to explain the program. If the Hatchling Hotline (361-949-7163) shows an imminent release, rearrange your morning entirely around it.</div>
+    </div>
+  </div>
+</div>
+
+<!-- CAMPING -->
+<div id="camping" class="sec rv">
+  <div class="mono">Where to sleep</div>
+  <h2 class="stitle">Camping</h2>
+
+  <div class="campgrid">
+    <div class="campcard on">
+      <span class="campnight">Nights 1–2 · Thu & Fri · Confirmed ✓</span>
+      <div class="campname">Mustang Island State Park</div>
+      <div class="campbody">Water & electric hookups · $25/night · Reserved · Gate closes 10pm · Showers & bathrooms on-site · Gulf over the dunes · Consistent coastal breeze · Book late-arrival instructions if needed: (361) 749-5246</div>
+    </div>
+    <div class="campcard">
+      <span class="campnight">Night 3 · Sat · Optional</span>
+      <div class="campname">PINS — Bird Island Basin <em style="font-weight:300">or</em> South Beach</div>
+      <div class="campbody"><strong>Bird Island Basin:</strong> $8/night, first-come · Laguna Madre bay views · gravel sites · vault toilets · 35 RV + 10 tent-only sites · No reservations · quiet hours 10pm–6am<br><br><strong>South Beach primitive:</strong> Free with ATB pass · self-register at kiosk · 4WD recommended past mile 5 · Gulf-facing · no facilities · dark skies</div>
+    </div>
+  </div>
+
+  <div style="background:rgba(255,255,255,.5);border:1px solid var(--bd);border-radius:3px;padding:11px 13px;font-size:12px;color:var(--t3);line-height:1.65">
+    <strong style="color:var(--ink);display:block;margin-bottom:3px">If you booked 3 nights at Mustang Island</strong>
+    Simply stay all three nights — no PINS overnight needed. Saturday becomes a pure day trip to PINS (15 min drive) without any camp-move logistics. This is the most comfortable and lowest-stress option.
+    <br><br>
+    <strong style="color:var(--ink);display:block;margin-bottom:3px">If you want the PINS overnight experience</strong>
+    Check out of Mustang Island Saturday morning before 11am, drive to PINS, check Bird Island Basin availability at the kiosk. It fills but rarely overflows on late May weekdays/Saturdays outside holidays. Arrive by 11am for best site selection. America the Beautiful pass covers both entrance and South Beach camping.
+  </div>
+</div>
+
+<!-- DINING -->
+<div id="dining" class="sec rv">
+  <div class="mono">Food & drink</div>
+  <h2 class="stitle">Dining Guide</h2>
+
+  <div class="dhero">
+    <div class="deye">⭐ Friday night · Nice dinner</div>
+    <div class="dname">Tortuga's Saltwater Grill</div>
+    <div class="dbody">429 N Alister St · Dinner from 3pm Fri · Brunch Sat–Sun 9am–2pm · The elevated choice on the island. Lobster rolls, fresh Gulf redfish, seafood tower, wine list. 4.4★ from 2,000+ reviews. Arrives perfectly after your afternoon birding loop. Book ahead — (361) 749-2739 or OpenTable.</div>
+    <div class="dchips">
+      <span class="dchip">Lobster Roll</span>
+      <span class="dchip">Gulf Redfish</span>
+      <span class="dchip">Seafood Tower</span>
+      <span class="dchip">Shrimp & Grits (brunch)</span>
+      <span class="dchip">Port A Benny (brunch)</span>
+      <span class="dchip">Full bar</span>
+      <span class="dchip">Book ahead</span>
+    </div>
+  </div>
+
+  <div style="margin-bottom:12px">
+    <div class="mono" style="margin-bottom:6px">Sunday breakfast — pick one</div>
+    <div class="drow">
+      <div class="dcell" style="border-color:var(--amber)">
+        <div class="dcname">Tortuga's Brunch</div>
+        <div class="dcbody">Open 9am–2pm Sun. Port A Benny, Shrimp & Grits, French toast. The nicest option for a send-off meal. Same place as Friday dinner — already know the menu. ★ 4.4</div>
+      </div>
+      <div class="dcell" style="border-color:var(--amber)">
+        <div class="dcname">Island Bakery</div>
+        <div class="dcbody">200 W Ave G · Open 8am–2pm Sun. Signature cruffins, sourdough, kolaches, bacon egg and cheese. Best if you want to hit the road early. Grab-and-go or sit in. ★ 4.5</div>
+      </div>
+    </div>
+    <div class="dcell" style="margin-top:8px;border:1px solid var(--bd);border-radius:3px;padding:11px 13px;background:rgba(255,255,255,.55)">
+      <div class="dcname">Black Marlin Bar & Grill</div>
+      <div class="dcbody">258 Snapdragon · Brunch Sun 10am–2pm. Crab eggs benedict, beignets, coastal shrimp and grits. Upscale patio, a bit south of town (~10 min). If you want a more leisurely Sunday with a later start. ★ 4.1</div>
+    </div>
+  </div>
+
+  <div class="mono" style="margin-bottom:6px">Other meals</div>
+  <div class="drow">
+    <div class="dcell">
+      <div class="dcname">The Crazy Cajun</div>
+      <div class="dcbody">303 Beach St · Sat 12–9pm, closed Mon · 37-year island institution. Cajun boils, jambalaya, peel-and-eat shrimp. Cash only. Good Saturday lunch option. ★ 4.2</div>
+    </div>
+    <div class="dcell">
+      <div class="dcname">Coffee Waves</div>
+      <div class="dcbody">1007 TX-361 · Daily 7am–9pm. Remote work HQ and morning coffee every day. Gelato, paninis, espresso. Free WiFi. Live music Fridays. ★ 4.6</div>
+    </div>
+    <div class="dcell" style="margin-top:8px">
+      <div class="dcname">Grumbles Seafood Co.</div>
+      <div class="dcbody">850 Tarpon St · Daily 11am–9pm. Counter service, Gulf-caught fish only, waterfront. Easy casual lunch — blackened shrimp bowl. ★ 4.0</div>
+    </div>
+    <div class="dcell" style="margin-top:8px">
+      <div class="dcname">Virginia's on the Bay</div>
+      <div class="dcbody">815 Trout St · Daily 11am–10pm. Raw oysters, bay views, margaritas. Good alternative Sunday lunch if Island Bakery is full. ★ 4.0</div>
+    </div>
+  </div>
+</div>
+
+<!-- SPECIES -->
+<div id="species" class="sec rv">
+  <div class="mono">What to expect · late May</div>
+  <h2 class="stitle">Target Species</h2>
+
+  <div style="margin-bottom:14px">
+    <div class="mono" style="margin-bottom:4px">PINS · Laguna Madre · year-round residents</div>
+    <div class="spgrid">
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Reddish Egret</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Crested Caracara</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Brown Pelican</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Black Skimmer</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Least Tern</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Royal Tern</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Long-billed Curlew</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Snowy Egret</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Roseate Spoonbill</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Wilson's Plover</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>American Avocet</div>
+      <div class="spi"><span class="spd" style="background:var(--sage)"></span>Tricolored Heron</div>
+    </div>
+  </div>
+
+  <div style="margin-bottom:14px">
+    <div class="mono" style="margin-bottom:4px">Port Aransas birding sites</div>
+    <div class="spgrid">
+      <div class="spi"><span class="spd" style="background:var(--amber)"></span>Flamingo (resident!)</div>
+      <div class="spi"><span class="spd" style="background:var(--teal)"></span>Blk-bel. Whistling-Duck</div>
+      <div class="spi"><span class="spd" style="background:var(--teal)"></span>White Ibis</div>
+      <div class="spi"><span class="spd" style="background:var(--teal)"></span>Neotropic Cormorant</div>
+      <div class="spi"><span class="spd" style="background:var(--teal)"></span>Yellow-cr. Night-Heron</div>
+      <div class="spi"><span class="spd" style="background:var(--teal)"></span>Roseate Spoonbill</div>
+    </div>
+  </div>
+
+  <div>
+    <div class="mono" style="margin-bottom:4px">Late May lingerers &amp; shorebirds</div>
+    <div class="spgrid">
+      <div class="spi"><span class="spd" style="background:var(--rust)"></span>Painted Bunting ♂</div>
+      <div class="spi"><span class="spd" style="background:var(--rust)"></span>Ruddy Turnstone</div>
+      <div class="spi"><span class="spd" style="background:var(--rust)"></span>Magnificent Frigatebird</div>
+      <div class="spi"><span class="spd" style="background:var(--rust)"></span>Sanderling</div>
+      <div class="spi"><span class="spd" style="background:var(--rust)"></span>Indigo Bunting</div>
+      <div class="spi"><span class="spd" style="background:var(--rust)"></span>Red Knot</div>
+    </div>
+  </div>
+  <div style="font-size:11px;color:var(--t3);margin-top:8px;font-style:italic">380 total species recorded at PINS annually — nearly half of all US bird species.</div>
+</div>
+
+<!-- BUDGET -->
+<div id="budget" class="sec rv">
+  <div class="mono">Money</div>
+  <h2 class="stitle">Trip Budget</h2>
+  <p style="font-size:12px;color:var(--t3);margin-bottom:12px">Own truck camper · Excludes food, groceries, and daily coffee</p>
+  <div class="budgetcard">
+    <div class="brow"><span class="blabel">Mustang Island SP — 2 nights (confirmed)</span><span class="bval">$50</span></div>
+    <div class="brow"><span class="blabel">PINS — Bird Island Basin Sat night (optional)</span><span class="bval">$8</span></div>
+    <div class="brow"><span class="blabel">America the Beautiful pass (if not owned)</span><span class="bval">$80 one-time</span></div>
+    <div class="brow"><span class="blabel">Fuel — Austin roundtrip ~380 mi (~$3/gal)</span><span class="bval">~$63</span></div>
+    <div class="brow"><span class="blabel">Tortuga's Friday dinner (2 people + drinks)</span><span class="bval">~$85–100</span></div>
+    <div class="brow"><span class="blabel">Sunday breakfast (Island Bakery or Tortuga's brunch)</span><span class="bval">~$25–50</span></div>
+    <div class="brow"><span class="blabel">RF 200-800 lens rental — 3 days (est.)</span><span class="bval">~$90–110</span></div>
+    <div class="brow"><span class="blabel">Kayak rental — optional Saturday</span><span class="bval">~$50</span></div>
+    <div class="btot">
+      <span class="btlabel">Total before food & groceries</span>
+      <span class="btval">~$370–460</span>
+    </div>
+  </div>
+  <div style="font-size:11.5px;color:var(--t3);margin-top:8px;line-height:1.6">Skipping the dolphin cruise and keeping Saturday as a self-catered camp dinner saves ~$130–160 vs the previous version. The ATB pass pays for itself on PINS entry alone and covers South Beach camping free.</div>
+</div>
+
+<!-- PREP -->
+<div id="prep" class="sec rv">
+  <div class="mono">Before you go</div>
+  <h2 class="stitle">Checklist</h2>
+  <div class="budgetcard">
+    <ul class="ckl" id="ckl">
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">✅ Mustang Island State Park — 2 nights confirmed<span class="cksub">Already reserved. Call (361) 749-5246 before 4:30pm Thu if arriving after 9:30pm.</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Book Tortuga's for Friday dinner<span class="cksub">Call (361) 749-2739 or OpenTable · Friday evenings fill in summer</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Order RF 200-800 lens rental from Lensrentals<span class="cksub">Ship to Austin address · Thu delivery · Mon return label</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Get America the Beautiful pass<span class="cksub">nps.gov/planyourvisit/passes.htm · Covers PINS entry + optional beach camping free</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Check NOAA tide chart for PINS May 29–31<span class="cksub">tidesandcurrents.noaa.gov · Reference for 4WD beach drive timing on Saturday</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Download eBird offline for Nueces County<span class="cksub">Limited cell service on PINS South Beach past mile 5</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Save Hatchling Hotline number<span class="cksub">(361) 949-7163 · Call each morning during the trip for sea turtle release updates</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Check BirdCast the night before each morning session<span class="cksub">birdcast.info · Radar-detected migration over the Gulf Coast</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Pack DEET — ankles and wrists for any trail session<span class="cksub">PINS Grasslands Trail has chiggers in late May</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Tire pressure gauge · know beach PSI target (~20 psi)<span class="cksub">Re-inflate to road pressure before leaving the beach each time</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Pack extra water for PINS South Beach drive<span class="cksub">No facilities past mile 5 — carry at least 4L per person for a half-day</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Camp dinner supplies for Saturday night<span class="cksub">Grill, cooler, whatever you like — no restaurant run needed Saturday evening</span></div></li>
+      <li class="cki"><div class="ckb" onclick="ck(this)"></div><div class="cktxt">Format SD card in-camera before departure<span class="cksub">Canon R7 → Setup → Format Card · Confirm two backup copies exist first</span></div></li>
+    </ul>
+  </div>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="ftitle">Good light and good birds.</div>
+  <div class="fsub" style="margin-top:4px">Port Aransas &amp; Padre Island National Seashore · May 28–31, 2026 · Canon R7 + RF 200–800mm</div>
+</footer>
+
+<script>
+function J(id){const e=document.getElementById(id);if(e)e.scrollIntoView({behavior:'smooth',block:'start'})}
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('vis')}),{threshold:.06,rootMargin:'0px 0px -15px 0px'});
+document.querySelectorAll('.rv').forEach(e=>obs.observe(e));
+const secs=['overview','thu','fri','sat','sun','optional','camping','dining','species','budget','prep'];
+const btns=document.querySelectorAll('.nb');
+const no=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){const i=secs.indexOf(x.target.id);btns.forEach((b,j)=>b.classList.toggle('on',i===j))}}),{threshold:.2});
+secs.forEach(id=>{const e=document.getElementById(id);if(e)no.observe(e)});
+function ck(el){el.classList.toggle('on');save()}
+function save(){const s=[...document.querySelectorAll('.ckb')].map(b=>b.classList.contains('on'));try{localStorage.setItem('porta_pins_v4',JSON.stringify(s))}catch(e){}}
+function load(){try{const s=JSON.parse(localStorage.getItem('porta_pins_v4')||'[]');const bs=document.querySelectorAll('.ckb');s.forEach((v,i)=>{if(bs[i]&&v)bs[i].classList.add('on')})}catch(e){}}
+load();
+</script>
+</body>
+</html>
